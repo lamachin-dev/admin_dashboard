@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <sidebar>
+      <h1>Dashboard</h1>
+      <ul>
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Messages</li>
+        <li>History</li>
+        <li>Tasks</li>
+        <li>Communities</li>
+        <li>Settings</li>
+        <li>Support</li>
+        <li>Privacy</li>
+      </ul>
+    </sidebar>
+    <header>
+      <div class="header-top">
+        <div class="search-bar">
+          <form action="">
+            <img src="" alt="magnifier" />
+            <label for="search-box"></label>
+            <input id="search-box" type="search" />
+          </form>
+        </div>
+        <img src="" alt="notification" />
+        <img src="" alt="profile-pic" />
+        <h2>Morgan Oakley</h2>
+      </div>
+
+      <div class="header-bottom">
+        <img src="" alt="profile-pic-large" />
+        <div id="welcome-message">
+          <p id="greeting">Hi there,</p>
+          <p id="username">Morgan Oakley</p>
+        </div>
+        <div class="project-buttons">
+          <button id="new">New</button>
+          <button id="upload">Upload</button>
+          <button id="share">Share</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="projects">
+        <div class="card">
+          <h3 class="card-title"></h3>
+          <p class="card-text">
+            <button class="star"></button><button class="watch"></button
+            ><button class="fork"></button>
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="card-title"></h3>
+          <p class="card-text">
+            <button class="star"></button><button class="watch"></button
+            ><button class="fork"></button>
+          </p>
+        </div>
+      </div>
+      <div id="announcements">
+        <ul>
+          <li>
+            <h4 class="announcement-title"></h4>
+            <p class="announcement-text"></p>
+          </li>
+          <li>
+            <h4 class="announcement-title"></h4>
+            <p class="announcement-text"></p>
+          </li>
+          <li>
+            <h4 class="announcement-title"></h4>
+            <p class="announcement-text"></p>
+          </li>
+        </ul>
+      </div>
+      <div id="trending">
+        <ul>
+          <li>
+            <img src="" alt="" />
+            <p class="tag"></p>
+            <p class="tending-name"></p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p class="tag"></p>
+            <p class="tending-name"></p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>
