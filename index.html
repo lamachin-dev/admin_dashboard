@@ -9,17 +9,21 @@
   <body>
     <div class="sidebar">
       <h1>Dashboard</h1>
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
-      </ul>
+      <nav>
+        <ul id="sidebar-main">
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Messages</li>
+          <li>History</li>
+          <li>My Tasks</li>
+          <li>Communities</li>
+        </ul>
+        <ul id="sidebar-misc">
+          <li>Settings</li>
+          <li>Support</li>
+          <li>Privacy</li>
+        </ul>
+      </nav>
     </div>
     <header>
       <div class="header-top">
@@ -30,9 +34,9 @@
             <input id="search-box" type="search" />
           </form>
         </div>
-        <img src="" alt="notification" />
-        <img src="" alt="profile-pic" />
-        <h2>Morgan Oakley</h2>
+        <img id="notification" src="" alt="notification" />
+        <img id="profile-pic-small" src="" alt="profile-pic" />
+        <h2 id="username-header">Morgan Oakley</h2>
       </div>
 
       <div class="header-bottom">
