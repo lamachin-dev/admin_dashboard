@@ -1,6 +1,6 @@
 body {
   display: grid;
-  grid-template-columns: min-content minmax(100px, 90%);
+  grid-template-columns: max-content minmax(100px, 90%);
   gap: 10px;
 }
 
@@ -8,6 +8,7 @@ body {
   border: solid black 1px;
   grid-row: 1/3;
   background-color: aquamarine;
+  padding: 10px;
   /* display:grid;
     grid-template-rows: 1fr 5fr; */
 }
@@ -34,6 +35,8 @@ ul {
 .card button img{
     width: 20px;
 }
+
+
 /* -------------------------------------------------------------------------- */
 
 .header-top {
@@ -50,7 +53,28 @@ ul {
 .sidebar nav ul {
   background-color: green;
   display: grid;
-  grid-auto-rows: 30px;
+  grid-auto-rows: 40px;
+  font-size: 22px;
+  padding-inline-start: 20px;
+}
+
+.sidebar img{
+  display: inline-block;
+  width: 23px;
+}
+
+.sidebar li{
+  background-color: rgb(55, 108, 55);
+}
+
+.sidebar li img{
+  margin-bottom: -4px ;
+  margin-right:5px
+}
+
+.sidebar li#home img{
+  width: 28px;
+  margin-right: 2px;
 }
 
 main {
