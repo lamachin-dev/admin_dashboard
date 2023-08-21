@@ -1,56 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+  --color-main: #601dfd;
+  --color-second: #905efc;
+  --color-third: #D7BBF5;
+  --color-fourth: #EDE4FF;
+}
+
+
+
 body {
   display: grid;
   grid-template-columns: max-content minmax(100px, 90%);
-  gap: 10px;
+  /* gap: 0px; */
+  font-family: Montserrat;
+  color:white;
+  background-color: var(--color-main);
 }
 
 .sidebar {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   grid-row: 1/3;
-  background-color: aquamarine;
+  background-color: var(--color-second);
   padding: 40px 20px;
   /* display:grid;
     grid-template-rows: 1fr 5fr; */
 }
 
 header {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   grid-column: 2/3;
   display:grid;
   grid-template-rows: 80px 100px;
+  margin-left: 30px;
+  padding: 40px 30px 30px 30px;
+  border-bottom: solid 5px #EDE4FF;
 }
 main {
-  border: solid black 1px;
-  padding: 10px;
+  /* border: solid black 1px; */
+  padding: 10px 40px 10px 10px;
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: 4fr 200px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr;
   gap: 15px;
+  margin-left: 30px;
 
 }
 
 /* ------------------------- End of top-level layout ------------------------ */
 /* ----------------------------- common elements ---------------------------- */
+main #projects-title{
+  grid-column: 1/3;
+  grid-row:1/2;
+}
+
 ul {
   list-style: none;
   padding-inline-start: 0px;
 }
+
+img{
+  color:white;
+}
+
 .card {
-  background-color: orange;
+  background-color: var(--color-fourth);
+  color:rgb(35, 33, 33);
   width: 200px;
   padding: 5px 10px 15px;
   border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+
 }
 
 .card .card-button-wrapper{
   margin-left: 90px;
 }
 
-button{
+.card button{
   appearance: none;
   border-radius: 10px;
-  border:none
+  border:none;
+  background: none;
 }
 
 .card button img {
@@ -67,7 +99,7 @@ button{
 }
 
 .header-top {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   display: grid;
   grid-template-columns: 3fr 50px 80px max-content;
   align-items: center;
@@ -75,6 +107,22 @@ button{
 
 header #profile-pic-small {
   width: 35px;
+}
+
+.project-buttons{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+header button{
+  appearance: none;
+  border-radius: 10px;
+  border:none;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 30px;
+  background-color: var(--color-third);
 }
 .header-top img {
   width: 22px;
@@ -88,9 +136,9 @@ header #profile-pic-small {
 }
 
 .header-bottom {
-  border: solid black 1px;
+  /* border: solid black 1px; */
   display: grid;
-  grid-template-columns: 100px 1fr 200px;
+  grid-template-columns: 100px 5fr 1fr;
   align-items: center;
 }
 
@@ -100,7 +148,7 @@ header #profile-pic-small {
 
 .profile-pic {
   border-radius: 50%;
-  border: solid black 3px;
+  border: solid white 3px;
 }
 
 .header-bottom img {
@@ -108,7 +156,7 @@ header #profile-pic-small {
 }
 
 .sidebar nav ul {
-  background-color: green;
+  /* background-color: var(--color-main); */
   display: grid;
   grid-auto-rows: 40px;
   font-size: 22px;
@@ -117,7 +165,10 @@ header #profile-pic-small {
 
 #sidebar-title {
   display: flex;
+  margin-right: 40px;
+  margin-top: 100px;
   margin-bottom: 100px;
+  font-size: larger;
 }
 #sidebar-title img {
   width: 40px;
@@ -129,9 +180,6 @@ header #profile-pic-small {
   width: 23px;
 }
 
-.sidebar li {
-  background-color: rgb(55, 108, 55);
-}
 
 .sidebar li img {
   margin-bottom: -4px;
@@ -150,17 +198,30 @@ main h4{
 }
 
 main #projects {
-  background-color: green;
-  grid-row: 1/3;
+  background-color: var(--color-main);
+  grid-row: 2/4;
   padding: 5px;
   min-width: 280px;
 }
 
+#announcements{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  grid-row: 2/3;
+
+}
+#trending{
+  grid-row: 3/4;
+
+}
+
 main #announcements, #trending {
-  background-color: rgb(41, 187, 41);
  border-radius: 10px;
- padding: 5px 10px;
+ padding: 15px 25px;
  text-align: center;
+ min-width: 200px;
+ background-color: #530ff4;
+ box-shadow: 5px 5px 5px rgba(53,4,168,0.3);
 }
 
 #trending img{
@@ -179,7 +240,9 @@ main #announcements, #trending {
 
 #card-wrapper {
   display: grid;
-  padding: 10px 0px 20px 20px;
+  padding: 10px 20px 20px 20px;
   gap: 40px;
+  grid-row:2/4;
+  grid-column: 1/2;
   grid-template-columns: repeat(auto-fit, 200px);
 }
